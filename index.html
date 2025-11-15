@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — Celebration Page</title>
+  <style>
+    :root{--bg:#fff6f9;--card:#ffffff;--accent:#ff6b81;--muted:#6b6b6b}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#222;background:linear-gradient(135deg,var(--bg),#fff);} 
+    .container{max-width:900px;margin:40px auto;padding:28px}
+    .card{background:var(--card);border-radius:18px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,0.08);display:flex;gap:24px;align-items:center}
+    .photo{flex:0 0 220px;height:220px;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .content{flex:1}
+    h1{margin:0 0 8px;font-size:clamp(22px,3vw,36px);letter-spacing:-0.02em}
+    p.lead{margin:8px 0 18px;color:var(--muted);font-size:16px}
+    .details{display:flex;gap:12px;flex-wrap:wrap}
+    .badge{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0.6)100%);padding:10px 14px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);min-width:140px}
+    .badge strong{display:block;font-size:14px}
+    .badge span{display:block;font-size:13px;color:var(--muted)}
+    .message{margin-top:18px;background:linear-gradient(90deg,rgba(255,107,129,0.06),rgba(255,182,193,0.04));padding:16px;border-radius:12px;border:1px solid rgba(255,107,129,0.09)}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(255,107,129,0.18)}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:720px){.card{flex-direction:column;align-items:center}.photo{width:160px;height:160px}.details{justify-content:center}.badge{min-width:120px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="region" aria-label="Birthday celebrant card">
+      <div class="photo" aria-hidden="false">
+        <!-- Replace the src with your celebrant's photo or keep the placeholder -->
+        <img src="image/halima.jpeg" alt="Celebrant photo">
+      </div>
+      <div class="content">
+        <h1>Happy Birthday, <span id="name">Tobiloba</span> 🎉</h1>
+        <p class="lead">Wishing you a day filled with laughter, love and all your favourite things. Thank you for being a wonderful friend, family member, and curious human. Here’s to another amazing year!</p>
+
+        <div class="details" aria-live="polite">
+          <div class="badge">
+            <strong>Date</strong>
+            <span id="date">November 15, 2025</span>
+          </div>
+          <div class="badge">
+            <strong>Venue</strong>
+            <span id="venue">Manchester, 5pm</span>
+          </div>
+          <div class="badge">
+            <strong>Hosted by</strong>
+            <span id="host">Families &amp; Friends</span>
+          </div>
+        </div>
+
+        <div class="message">
+          <p><em>Dear <span id="name2">Tobiloba</span>,</em></p>
+          <p>It has been an immense honor to  celebrate your remarkable birthday today. You radiate like a brilliant comet, illuminating the lives of those around you with your extraordinary presence and unwavering dedication. Meeting you and recognizing the journey of a painstakingly dedicated entrepreneur like yourself is truly inspiring. You embody a powerful blend of hope, love, and purpose, serving as a beacon for others. 
+
+Your commitment to uniting people is not just commendable, it’s transformative, creating bonds that foster understanding and collaboration. As you mark the milestone of your birthday today, I encourage you to continue embracing the countless blessings life has in store for you. 
+
+May each bold step you take unveil new paths of success and opportunity, and may the gentle showers of blessings continually nourish your aspirations as you advance on your journey. Your light is a gift to the world. Keep shining brightly and inspiring those around you.</p>
+          <p style="margin:0;font-weight:700"> Congratulations Ajoke aya ............</p>
+          <p style="margin:6px 0 0">Everyone loves you 💖</p>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#" onclick="alert('RSVP submitted — thank you!')">RSVP</a>
+        </div>
+
+        <footer>
+     
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // small script to show how to change text easily
+    // You can edit these values or connect them to a small form if you like.
+    const celebrant = {
+       
+    };
+    document.getElementById('name').textContent = celebrant.name;
+    document.getElementById('name2').textContent = celebrant.name.split(' ')[0];
+    document.getElementById('date').textContent = celebrant.date;
+    document.getElementById('venue').textContent = celebrant.venue;
+    document.getElementById('host').textContent = celebrant.host;
+  </script>
+</body>
+</html>
